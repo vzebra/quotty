@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const sequelize_1 = require("sequelize");
+const protocol = 'postgres';
+const login = 'quote';
+const host = '216.189.151.18';
+const port = 5432;
+const password = 'quote';
+const dbName = 'quotty';
+const uri = `${protocol}://${login}:${password}@${host}:${port}/${dbName}`;
+exports.default = new sequelize_1.Sequelize(uri);

@@ -1,0 +1,6 @@
+export * from './getQuoteById'
+export * from './updateQuote'
+export * from './markQuoteDeleted'
+export * from './findRandomQuote'
+export * from './appendQuote'
+export * from './getPaginatedQuotes'

@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/",
+    "target": "ES6",
+    "module": "CommonJS",
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "baseUrl": "./",
+    "paths": {
+      "@middleware/*": ["packages/server/src/middleware/*"],
+      "@routes/*": ["packages/server/src/routes/*"],
+      "@services/*": ["packages/server/src/services/*"],
+      "@interfaces/*": ["packages/common/src/interfaces/*"],
+      "@helpers/*": ["packages/common/src/helpers/*"],
+      "@schema/*": ["packages/server/src/schema/*"],
+      "@components/*": ["packages/client/src/components/*"],
+      "@store/*": ["packages/client/src/store/*"],
+      "@hooks/*": ["packages/client/src/hooks/*"],
+      "@api/*": ["packages/client/src/api/*"],
+      "@models/*": ["packages/server/src/models/*"],
+      "@common/*": ["packages/common/src/*"]
+    },
+    "plugins": [
+      {
+          "transform": "typescript-transform-paths"
+      }
+    ]
+  },
+  "include": [
+    "packages/**/*"
+  ],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}

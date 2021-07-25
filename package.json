@@ -1,0 +1,25 @@
+{
+  "name": "quotty",
+  "version": "1.0.0",
+  "description": "Random quote machine",
+  "main": "index.js",
+  "repository": "https://git.epam.com/yevhen_horbunkov/quotty.git",
+  "author": "Yevhen Horbunkov",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn clean && ttsc -P ./tsconfig.base.json",
+    "test:unit": "yarn jest",
+    "format:write": "yarn run prettier --write --ignore-unknown \"**/*\"",
+    "format:check": "yarn run prettier --check --ignore-unknown \"**/*\"",
+    "eslint:check": "yarn eslint \"src/**\"",
+    "eslint:fix": "yarn eslint --fix \"src/**\"",
+    "ts:check": "tsc --noEmit --project ./tsconfig.json",
+    "clean": "rm -rf ./dist/*",
+    "dockerize:be": "sudo docker build -t public.ecr.aws/c3u1j1w8/quotty:back -f quotty.be.dockerfile .",
+    "ecrpush:be": "sudo docker push public.ecr.aws/c3u1j1w8/quotty:back"
+  }
+}

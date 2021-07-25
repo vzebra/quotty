@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.quoteRouter = void 0;
+const express_1 = require("express");
+const quote_1 = require("../../middleware/quote");
+exports.quoteRouter = express_1.Router();
+exports.quoteRouter.get('/random', quote_1.findRandomQuote);
+exports.quoteRouter.get('/:id', quote_1.getQuoteById);
+exports.quoteRouter.put('/:id', quote_1.updateQuote);
+exports.quoteRouter.delete('/:id', quote_1.markQuoteDeleted);
+exports.quoteRouter.post('/', quote_1.appendQuote);
+exports.quoteRouter.get('/', quote_1.getPaginatedQuotes);

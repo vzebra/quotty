@@ -1,0 +1,10 @@
+{
+    "name": "@quotty/common",
+    "version": "1.0.0",
+    "description": "Random quote machine",
+    "repository": "https://git.epam.com/yevhen_horbunkov/quotty.git",
+    "author": "Yevhen Horbunkov",
+    "license": "MIT",
+    "private": true
+  }
+  
